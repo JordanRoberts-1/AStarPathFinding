@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.astarpathfinding.Controller">
+   <children>
+      <VBox layoutX="1400.0" prefHeight="840.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="43.0" prefWidth="140.0" text="Starting Position:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="X:">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="startingXTextField" prefHeight="25.0" prefWidth="61.0" />
+            <Label text="Y:">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="startingYTextField" />
+            <Label prefHeight="43.0" prefWidth="110.0" text="Ending Position:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="X:">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="endingXTextField" />
+            <Label text="Y:">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="endingYTextField" />
+            <Button fx:id="startCalculatingButton" mnemonicParsing="false" onAction="#calculate" prefHeight="70.0" prefWidth="201.0" text="Start Calculating" />
+            <Button fx:id="clearBoardButton" mnemonicParsing="false" onAction="#clearBoard" text="Clear" />
+            <Slider fx:id="updateDelaySlider" />
+         </children>
+      </VBox>
+      <TilePane fx:id="tilePane" hgap="1.0" prefColumns="100" prefHeight="840.0" prefRows="60" prefTileHeight="13.0" prefTileWidth="13.0" prefWidth="1400.0" vgap="1.0" />
+   </children>
+</Pane>
